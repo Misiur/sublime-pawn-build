@@ -1,0 +1,12 @@
+{
+	"cmd": ["${project_path:${folder}}\\Compiler\\pawncc.exe", "${project_base_name}.pwn", "-;+", "-v2", "-d3", "-\\)+"],
+	"working_dir": "${project_path:${folder}}\\gamemodes",
+	"file_regex": "^([^\\.]+\\.pwn)\\((\\d+)\\)() : (.*)$",
+	"variants": [
+		{
+			"cmd": ["${project_path:${folder}}\\Compiler\\pawncc.exe", "${file_name}", "-;+", "-v2", "-d3", "-\\)+"],
+			"working_dir": "${file_path}",
+			"name": "Current file"
+		}
+	]
+}
